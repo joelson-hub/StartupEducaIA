@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EducaIA - Seu Assistente Pedagógico Inteligente</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <h1>EducaIA</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+          <li><a href="#"><i class="fas fa-history"></i> Meu Histórico</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+          <li><a href="#"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+          <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <h2>Bem-vindo(a), Professor(a)!</h2>
+        <div class="user-info">
+          <img src="https://valentereispessali.com.br/wp-content/uploads/2023/04/Como-funciona-o-periodo-de-intersticio-para-professor-substituto.png.webp" alt="Avatar do Usuário" class="user-avatar" />
+          <span>Joelson Vasconcelos</span>
+        </div>
+      </header>
+
+      <section class="prompt-section">
+        <h3>Crie seu Recurso com Inteligência Artificial</h3>
+        <div class="input-area">
+          <textarea id="aiPrompt" placeholder="Descreva o recurso que você precisa (ex: 'atividade de matemática sobre frações para o 6º ano', 'imagem de um mapa-múndi colorido')..."></textarea>
+          <div class="service-selection">
+            <label for="serviceType">Tipo de Recurso:</label>
+            <select id="serviceType">
+              <option value="">Selecione um serviço...</option>
+              <option value="atividade">Atividade Pronta</option>
+              <option value="imagem">Geração de Imagem</option>
+              <option value="calendario">Calendário Escolar</option>
+              <option value="tea">Recurso para Alunos TEA</option>
+              <option value="planoAula">Plano de Aula</option>
+              <option value="avaliacao">Ferramenta de Avaliação</option>
+            </select>
+          </div>
+          <button id="generateBtn" class="generate-button">Gerar Recurso <i class="fas fa-magic"></i></button>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <h3>Resultado da Geração</h3>
+        <div id="generatedContent" class="content-display">
+          <p>Seu recurso gerado aparecerá aqui.</p>
+        </div>
+        <div class="export-options">
+          <button class="export-btn" data-format="pdf"><i class="fas fa-file-pdf"></i> Exportar PDF</button>
+          <button class="export-btn" data-format="word"><i class="fas fa-file-word"></i> Exportar DOCX</button>
+          <button class="export-btn" data-format="excel"><i class="fas fa-file-excel"></i> Exportar XLSX</button>
+          <button class="export-btn" data-format="ppt"><i class="fas fa-file-powerpoint"></i> Exportar PPTX</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
